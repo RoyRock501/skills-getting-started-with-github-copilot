@@ -101,9 +101,24 @@ section h3 {
 }
 
 .participants-list {
-  margin: 6px 0 0 18px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
   color: #526072;
   font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.participants-list li span {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 
@@ -111,7 +126,26 @@ section h3 {
   margin-top: 3px;
 }
 
+.participants-list .remove-participant {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #e0c8c8;
+  border-radius: 4px;
+  background: #fff;
+  color: #a23f45;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.participants-list .remove-participant:hover {
+  background: #fff0f0;
+  color: #842e34;
+}
+
 .participants-list .no-participants {
+  display: block;
   color: #7b8490;
   font-style: italic;
 }
